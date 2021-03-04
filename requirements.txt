@@ -1,0 +1,6 @@
+tensorflow
+sklearn
+scipy
+numpy
+pandas
+scikit-image
