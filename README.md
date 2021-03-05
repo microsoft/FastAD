@@ -31,25 +31,12 @@ Log set : 500K pairs without Label, sampled in Bing Ads impression log.
 
 ## How to run
 
+This code needed to be run in docker.
+
 1. Pull docker
 > docker pull allenlao/pytorch-mt-dnn:v0.11
 2. Run docker
 > docker run -it --rm -p 0.0.0.0:6006:6006 --runtime nvidia allenlao/pytorch-mt-dnn:v0.11 bash
-
-## Train a toy C-DSSM_KD model
-
-Using Relevance Task in Bing Ads as example.
-
-1. Sample data
-Find all the train/ dev/ test/ log data in sample_data\input\QK.
-Scheme is id, label(binary), query, ads keyword. Separator is '\t'.
-
-2. Preprocess data
-Normalized the sentences to only keep characters and numbers.
-> python data_utils/DataPreprocess.py
-
-3. Training
-> python train_cdssm.py
 
 ## BibTeX
 
